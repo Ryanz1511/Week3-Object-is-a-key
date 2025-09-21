@@ -1,10 +1,14 @@
-
-function checkAB(num) {
-  let letterA = num.indexOf("a");
-  let letterB = num.indexOf("b")
-
-  return letterA
-  
+function checkAB(str) {
+  let selisihIndex = 4;
+  for (let i = 0; i < str.length - selisihIndex; i++) {
+    if (
+      (str[i] === "a" && str[i + selisihIndex] === "b") ||
+      (str[i] === "b" && str[i + selisihIndex] === "a")
+    ) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // TEST CASES

@@ -82,7 +82,15 @@ Spasi juga dianggap sebagai karakter
 */
 
 function checkAB(num) {
-  // you can only write your code here!
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] === "a") {
+      if (num[i + 4] === "b") return true;
+    }
+    if (num[i] === "b") {
+      if (num[i + 4] === "a") return true;
+    }
+  }
+  return false;
 }
 
 // TEST CASES
