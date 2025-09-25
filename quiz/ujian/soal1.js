@@ -1,5 +1,17 @@
 function deepSum (arr) {
-  return arr
+  let res = 0
+  if (arr.length===0) {
+    return []
+  }
+ for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    for (let k = 0; k < arr[i][j].length; k++) {
+     res+=arr[i][j][k]
+    }
+  }
+  
+ }  
+  return res
 }
 
 //TEST CASE
